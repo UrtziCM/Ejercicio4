@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a0240757-6894-437e-9381-fdb6126eed95">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nomMedico" class="java.lang.String"/>
+	<parameter name="espMedico" class="java.lang.String"/>
+	<parameter name="numMedico" class="java.lang.String"/>
+	<parameter name="nomPaciente" class="java.lang.String"/>
+	<parameter name="dirPaciente" class="java.lang.String"/>
+	<parameter name="numPaciente" class="java.lang.String"/>
+	<parameter name="tratamiento" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<textField>
+				<reportElement x="280" y="0" width="280" height="30" forecolor="#0537FF" uuid="a5344fdb-da56-457e-8a83-d4d8d8962324"/>
+				<textElement textAlignment="Right">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Dr. " + $P{nomMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="30" width="210" height="30" uuid="9d20b67a-64d4-465e-b517-8ed45d4bb486"/>
+				<textElement textAlignment="Right">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{espMedico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="64" width="287" height="30" uuid="d4eeed02-3274-4848-a6bd-0492d92c6ae7"/>
+				<textElement textAlignment="Right">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nº Colegiado " + $P{numMedico}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="90" splitType="Stretch">
+			<rectangle radius="15">
+				<reportElement x="0" y="0" width="557" height="90" uuid="4ccb1ea3-cac5-4e76-b9ca-d20e12d28113"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="100" y="50" width="445" height="1" uuid="0e1411f3-053c-4902-b103-38b35520f8e5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="30" width="100" height="21" uuid="375be674-ebb4-4db8-90ed-12c23e9330ce"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="100" y="28" width="445" height="1" uuid="50e8d38a-c693-4f2b-ae9b-dc5c1894e0e0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="8" width="100" height="21" uuid="37351153-2631-412e-8d56-6eeb594e0212"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[Nombre: ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="101" y="72" width="445" height="1" uuid="a6d8ad2e-d181-444d-9ad7-2dae687a9403"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="52" width="100" height="21" uuid="81faac5a-4025-4041-8bb0-8b62178b85e8"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[Nº Documento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="8" width="100" height="18" uuid="bb7c2b00-d803-468e-ae9a-360719ad0d34"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{nomPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="29" width="100" height="20" uuid="310c580a-19dc-4cc2-b25c-b0821c1a374c"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{dirPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="42" width="100" height="30" uuid="1e2e08a4-994f-421a-8d9d-1ced5aebc53d"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{numPaciente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="130" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="10" width="557" height="20" backcolor="#058FFF" uuid="27702c29-1fbc-4396-818b-e0d9a9c56668"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="10" width="556" height="20" forecolor="#FFFFFF" uuid="1e3322c2-d320-4ae6-8b43-e90552d1dd5e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRATAMIENTO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="40" width="556" height="90" uuid="ad901d2c-ba92-4eda-b288-15befb81996b"/>
+				<textFieldExpression><![CDATA[$P{tratamiento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>
